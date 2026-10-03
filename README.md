@@ -115,7 +115,7 @@ Under 30   Standard           86     11103
 
 **Code:**
 
-```sql
+```
 SELECT
 Subscription_table.Subscription_Type,
 COUNT(*) AS Users,
@@ -146,7 +146,7 @@ Premium            733    98237
 
 **Code:**
 
-```sql
+```
 SELECT
 Country,
 IFNULL(Plan_Name, 'Total') AS Subscription_Type,
@@ -244,7 +244,7 @@ United States   Total              59928          132.88
 
 **Code:**
 
-```sql
+```
 SELECT
 Gender,
 IFNULL(Device_Name, 'Total') AS Device,
