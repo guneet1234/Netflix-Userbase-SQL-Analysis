@@ -38,7 +38,7 @@ The main table holds all the user information and connects to the lookup tables 
 
 4) Analytical Question
 
-### Question 1
+(### Question 1
 
 **Question:** What is the total revenue each user has paid so far? Create a new column Total_Revenue by multiplying each user's Monthly_Revenue by the number of months from Join_Date to LMP.
 
@@ -64,7 +64,7 @@ User_ID  Monthly_Revenue  Join_Date   LMP         Total_Revenue
 8        10               2023-04-02  2023-06-24  30
 9        12               2022-10-20  2023-06-23  108
 10       15               2023-01-07  2023-06-22  90
-```
+```)
 
 ### Question 2
 
