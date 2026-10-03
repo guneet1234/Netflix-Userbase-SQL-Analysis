@@ -173,7 +173,6 @@ GROUP BY Country_table.Country, Subscription_table.Subscription_Type WITH ROLLUP
 ) AS Revenue_Data
 WHERE Country IS NOT NULL
 ORDER BY Country, Plan_Name IS NULL, Total_Revenue DESC;
-``
 ```
 **Output:**
 
