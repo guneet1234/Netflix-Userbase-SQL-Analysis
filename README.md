@@ -333,7 +333,7 @@ Basic is the most popular and highest-revenue plan, while the U.S. and Spain are
 To increase revenue sustainably, focus on upgrading Basic users, improve Italy through targeted offers, and introduce value-added features or bundles for Laptop and Smart TV users.
 
 ``
-5) use fo AI
+5) use of AI
 
    AI was used to **optimize and support the project**, mainly for refining SQL queries, simplifying code, and improving the README. The **analysis, questions, and logic were my own**, with AI helping me validate and present my work more effectively.
 
