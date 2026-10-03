@@ -173,8 +173,8 @@ GROUP BY Country_table.Country, Subscription_table.Subscription_Type WITH ROLLUP
 ) AS Revenue_Data
 WHERE Country IS NOT NULL
 ORDER BY Country, Plan_Name IS NULL, Total_Revenue DESC;
+``
 ```
-
 **Output:**
 
 ```
@@ -237,16 +237,17 @@ United States   Standard           14376          134.36
 United States   Total              59928          132.88
 ----------------------------------------------------------------------
 ```
-
+```
 **Analysis:** The United States generates the most revenue (59,928) and Italy the least (23,399), with Spain close behind the United States at 58,752. France has the highest average revenue per user (141.05) but a total of only 25,813 because it has just 183 users, so focusing on France could generate more revenue even though its total is lower. Italy also has the lowest average revenue per user (127.86), so it has the most room to improve on both total and average.
 ```
+````
 ### Question 5
 
 **Question:** Which device does each gender prefer? Count the users of each gender on every device and show the total revenue they brought in, followed by the total of that gender.
 
 **Code:**
 
-```
+``
 SELECT
 Gender,
 IFNULL(Device_Name, 'Total') AS Device,
@@ -271,10 +272,10 @@ GROUP BY Gender_table.Gender, Device_table.Device WITH ROLLUP
 WHERE Gender IS NOT NULL
 ORDER BY Gender, Device_Name IS NULL, Users DESC;
 ```
-
+```
 **Output:**
 
-```
+``
 Gender  Device      Users  Total_Revenue
 Female  Laptop      329    43485
 Female  Tablet      323    44581
@@ -290,9 +291,10 @@ Male    Smart TV    305    40767
 ----------------------------------------
 Male    Total       1243   166524
 ----------------------------------------
-```
+``
 
 **Analysis:** Male and female users are almost the same, with females slightly ahead (1,257 users and 167,452 revenue against 1,243 users and 166,524 for males). Laptop is the most used device overall (329 female and 307 male users), though males lean towards smartphone, and the gap between devices is small. Since laptop users are the biggest group, a plan with better features at a slightly higher price could bring in more revenue from them.
+```
 ```
 ### Question 6
 
@@ -300,7 +302,7 @@ Male    Total       1243   166524
 
 **Code:**
 
-```sql
+``
 SELECT
 Subscription_table.Subscription_Type,
 COUNT(*) AS Users,
@@ -315,14 +317,15 @@ WHERE NetflixUserbase.Age > (SELECT AVG(Age) FROM NetflixUserbase)
 GROUP BY Subscription_table.Subscription_Type
 ORDER BY Users DESC;
 ```
-
+```
 **Output:**
 
-```
+``
 Subscription_Type  Users  Total_Revenue
 Basic              519    68210
 Standard           404    54737
 Premium            366    49324
+```
 ```
 **Analysis:**
 Users aged 39+ make up 52% of the user base and contribute 172,271 in revenue, making them a significant customer segment.
