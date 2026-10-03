@@ -1,4 +1,4 @@
-<img width="830" height="417" alt="image" src="https://github.com/user-attachments/assets/0088fc51-5414-42c2-bd62-c7e17d574538" /># Netflix-Userbase-SQL-Analysis
+# Netflix-Userbase-SQL-Analysis
 
 1) Project Overview
    
@@ -111,8 +111,6 @@ Under 30   Standard           86     11103
 ```
 ### Question 3
 
-
-```
 **Question:** What is the gap between the most and least selling subscription plan? Count the users on each plan and show the total revenue each plan brought in.
 
 **Code:**
@@ -144,8 +142,6 @@ Premium            733    98237
 ```
 ### Question 4
 
-
-```
 **Question:** Which countries generate the highest and lowest revenue on each plan? Show the total revenue and the average revenue per user for every country and plan, followed by the total revenue and average revenue of that country.
 
 **Code:**
@@ -244,8 +240,6 @@ United States   Total              59928          132.88
 ```
 ### Question 5
 
-
-```
 **Question:** Which device does each gender prefer? Count the users of each gender on every device and show the total revenue they brought in, followed by the total of that gender.
 
 **Code:**
@@ -300,7 +294,6 @@ Male    Total       1243   166524
 ```
 ### Question 6
 
-```
 **Question:** Which plans are chosen by users older than the average age? Find the average age of all users, then count the users above that age on each plan and show the total revenue they brought in.
 
 **Code:**
