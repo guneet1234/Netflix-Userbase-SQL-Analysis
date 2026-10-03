@@ -294,6 +294,36 @@ Male    Total       1243   166524
 
 **Analysis:** Male and female users are almost the same, with females slightly ahead (1,257 users and 167,452 revenue against 1,243 users and 166,524 for males). Laptop is the most used device overall (329 female and 307 male users), though males lean towards smartphone, and the gap between devices is small. Since laptop users are the biggest group, a plan with better features at a slightly higher price could bring in more revenue from them.
 ```
+### Question 7
+
+**Question:** Which plans are chosen by users older than the average age? Find the average age of all users, then count the users above that age on each plan and show the total revenue they brought in.
+
+**Code:**
+
+```sql
+SELECT
+Subscription_table.Subscription_Type,
+COUNT(*) AS Users,
+-- Total revenue = Monthly_Revenue x months paid (from Join_Date to LMP, joining month counted)
+SUM(NetflixUserbase.Monthly_Revenue *
+(TIMESTAMPDIFF(MONTH, NetflixUserbase.Join_Date, NetflixUserbase.LMP)
++ 1)) AS Total_Revenue
+FROM NetflixUserbase
+JOIN Subscription_table
+ON NetflixUserbase.Subscription_ID = Subscription_table.Subscription_code
+WHERE NetflixUserbase.Age > (SELECT AVG(Age) FROM NetflixUserbase)
+GROUP BY Subscription_table.Subscription_Type
+ORDER BY Users DESC;
+```
+
+**Output:**
+
+```
+Subscription_Type  Users  Total_Revenue
+Basic              519    68210
+Standard           404    54737
+Premium            366    49324
+```
 ```
 ### Question 6
 
