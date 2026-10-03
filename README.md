@@ -2,7 +2,7 @@
 
 1) Project Overview
    
-   This project analyses a Netflix user base dataset of 2,500 users using SQL. The data covers each user's subscription plan, monthly revenue, country, age, gender, device, join date and last monthly payment date.The goal is to understand who the users are and how they differ across plans, countries and devices. I wrote queries to answer 10 questions, such as how age group relates to plan choice, which countries bring in the most revenue, which devices people prefer, and how the user mix changed by join year.
+   This project analyses a Netflix user base dataset of 2,500 users using SQL. The data covers each user's subscription plan, monthly revenue, country, age, gender, device, join date and last monthly payment date. The goal is to understand who the users are and how they differ across plans, countries and devices. I wrote queries to answer 6 questions, such as how age group relates to plan choice, which countries bring in the most revenue, which devices people prefer, and how the user mix changed by join year.
 Tool used: SQL
 
 2) Dataset Explanation
@@ -110,6 +110,8 @@ Under 30   Standard           86     11103
 **Analysis:** The Basic plan is the most used plan and it generates the most revenue. Its target audience is the 30-39 age group. If the under 30 group was also targeted, the revenue would increase.
 ```
 ### Question 3
+
+
 ```
 **Question:** What is the gap between the most and least selling subscription plan? Count the users on each plan and show the total revenue each plan brought in.
 
@@ -141,6 +143,8 @@ Premium            733    98237
 **Analysis:** Basic is the most selling plan and generates the most revenue (132,617 from 999 users), while Premium is the least selling (98,237 from 733 users). The gap between Basic and Premium is 266 users and 34,380 in revenue. There is not much gap between Standard and Premium, only 35 users.
 ```
 ### Question 4
+
+
 ```
 **Question:** Which countries generate the highest and lowest revenue on each plan? Show the total revenue and the average revenue per user for every country and plan, followed by the total revenue and average revenue of that country.
 
@@ -239,6 +243,8 @@ United States   Total              59928          132.88
 **Analysis:** The United States generates the most revenue (59,928) and Italy the least (23,399), with Spain close behind the United States at 58,752. France has the highest average revenue per user (141.05) but a total of only 25,813 because it has just 183 users, so focusing on France could generate more revenue even though its total is lower. Italy also has the lowest average revenue per user (127.86), so it has the most room to improve on both total and average.
 ```
 ### Question 5
+
+
 ```
 **Question:** Which device does each gender prefer? Count the users of each gender on every device and show the total revenue they brought in, followed by the total of that gender.
 
@@ -292,8 +298,9 @@ Male    Total       1243   166524
 
 **Analysis:** Male and female users are almost the same, with females slightly ahead (1,257 users and 167,452 revenue against 1,243 users and 166,524 for males). Laptop is the most used device overall (329 female and 307 male users), though males lean towards smartphone, and the gap between devices is small. Since laptop users are the biggest group, a plan with better features at a slightly higher price could bring in more revenue from them.
 ```
-### Question 7
+### Question 6
 
+```
 **Question:** Which plans are chosen by users older than the average age? Find the average age of all users, then count the users above that age on each plan and show the total revenue they brought in.
 
 **Code:**
